@@ -1,4 +1,4 @@
-const API_URL = "https://cows-bulls-backend.onrender.com";
+const API_URL = "";
 
 let gameOver = false;
 
