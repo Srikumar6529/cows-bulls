@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f5;
+    color: #111827;
+}
+
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.rules h1 {
+    margin-top: 0;
+}
+
+.rules p {
+    margin: 8px 0;
+}
+
+.new-game-btn {
+    width: 100%;
+    margin: 20px 0;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.guess-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.guess-area button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.history {
+    margin-top: 20px;
+}
+
+.guess-card {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f9fafb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.guess-number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.result {
+    margin-top: 6px;
+}

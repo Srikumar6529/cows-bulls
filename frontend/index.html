@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cows and Bulls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="rules">
+        <h1>Cows and Bulls</h1>
+        <p>Guess the secret 4-digit number.</p>
+        <p><strong>Bull:</strong> correct digit in the correct position.</p>
+        <p><strong>Cow:</strong> correct digit in the wrong position.</p>
+        <p><strong>Click "New Game"</strong> to start a new game.</p>
+    </div>
+
+    <button onclick="startGame()" class="new-game-btn">New Game</button>
+
+    <div class="guess-area">
+        <input id="guessInput" type="text" maxlength="4" placeholder="Enter guess">
+        <button onclick="submitGuess()">Guess</button>
+    </div>
+
+    <p id="message"></p>
+
+    <div id="historyList" class="history"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
