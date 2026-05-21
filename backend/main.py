@@ -51,6 +51,7 @@ def start_game():
 @app.post("/guess")
 def check_guess(request: GuessRequest):
     global secret_number
+    #secret_number="4638"
 
     guess = request.guess
 
@@ -75,15 +76,22 @@ def check_guess(request: GuessRequest):
     bulls = 0
     cows = 0
 
+    cow_cnt=0
+    cow_digits=[]
     for i in range(4):
-        if guess[i] == secret_number[i]:
-            bulls += 1
-        elif guess[i] in secret_number:
-            cows += 1
+        if secret_number[i]==guess[i]:
+            cow_cnt+=1
+            cow_digits.append(secret_number[i])
+    bull_cnt=0
+    for x in guess:
+        if x in cow_digits:
+            continue
+        if x in secret_number:
+            bull_cnt+=1
 
     return {
         "guess": guess,
-        "cows": cows,
-        "bulls": bulls,
+        "cows": bull_cnt,
+        "bulls": cow_cnt,
         "correct": False
     }
